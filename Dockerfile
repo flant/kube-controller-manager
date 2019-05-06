@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-ARG KUBERNETES_VERSION=v1.11.9
+ARG KUBERNETES_VERSION=v1.10.13
 
 ENV DEBIAN_FRONTEND=noninteractive \
     container=docker \

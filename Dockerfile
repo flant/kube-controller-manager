@@ -11,7 +11,7 @@ RUN set -x \
     && apt-get update \
     && apt install wget apt-transport-https ca-certificates -y \
     && wget -q -O- 'https://download.ceph.com/keys/release.asc' | apt-key add - \
-    && echo deb https://download.ceph.com/debian-nautilus/ xenial main | tee /etc/apt/sources.list.d/ceph.list \
+    && echo deb https://download.ceph.com/debian-mimic/ xenial main | tee /etc/apt/sources.list.d/ceph.list \
     && apt-get update \
     && apt-get install -y \
         ceph-common \

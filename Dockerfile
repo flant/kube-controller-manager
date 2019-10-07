@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-ARG KUBERNETES_VERSION=v1.15.4
+ARG KUBERNETES_VERSION=v1.11.10
 
 ENV DEBIAN_FRONTEND=noninteractive \
     container=docker \
@@ -11,7 +11,7 @@ RUN set -x \
     && apt-get update \
     && apt install wget apt-transport-https ca-certificates -y \
     && wget -q -O- 'https://download.ceph.com/keys/release.asc' | apt-key add - \
-    && echo deb https://download.ceph.com/debian-nautilus/ xenial main | tee /etc/apt/sources.list.d/ceph.list \
+    && echo deb https://download.ceph.com/debian-jewel/ xenial main | tee /etc/apt/sources.list.d/ceph.list \
     && apt-get update \
     && apt-get install -y \
         ceph-common \
